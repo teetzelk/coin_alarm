@@ -15,13 +15,13 @@ def telegram_alert(coin, cost, perChange):
     report["value1"] = coin
     report["value2"] = cost
     report["value3"] = perChange
-    requests.post("https://maker.ifttt.com/trigger/coin_alert/with/key/dmvKd4MLi_KFy1YAPbk65G", data=report)
+    requests.post("https://maker.ifttt.com/trigger/coin_alert/with/key/<secretkey>", data=report)
 
 #Define standard messaging to Telegram for information purposes
 def telegram_msg(message):
     report = {}
     report["value1"] = message
-    requests.post("https://maker.ifttt.com/trigger/ca_message_system/with/key/dmvKd4MLi_KFy1YAPbk65G", data=report)
+    requests.post("https://maker.ifttt.com/trigger/ca_message_system/with/key/<secretkey>", data=report)
 
 telegram_msg("Reinitializing program")
 sleep(2)
